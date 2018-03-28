@@ -6,6 +6,14 @@ $(function() {
 
     })
 
+    $.ajax("sketchbooks/titles.php")
+        .done(function (response){
+            console.log("coucou");
+            console.log(response);
+        })
+    ;
+
+
     new Vue({
         el: '#app',
         data: {
@@ -22,6 +30,7 @@ $(function() {
             ]
         }
     });
+    console.log("couou");
 
 
 
