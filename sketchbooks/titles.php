@@ -14,6 +14,10 @@ $titles = array(
     array(
         'title' => 'Mon sketchbook number three',
         'id' => '3'
+    ),
+    array(
+        'title' => 'Mon quatrième carnet',
+        'id' => '4'
     )
 );
 
