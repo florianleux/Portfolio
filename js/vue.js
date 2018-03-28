@@ -6,31 +6,26 @@ $(function() {
 
     })
 
-    $.ajax("sketchbooks/titles.php")
-        .done(function (response){
-            console.log("coucou");
-            console.log(response);
-        })
-    ;
+    var sketchbooks;
+
+    $.ajax({
+        url: "sketchbooks/titles.php",
+        async: false,
+        success: function (response){
+             sketchbooks = JSON.parse(response)
+        }
+    });
+
+    console.log(sketchbooks);
+
 
 
     new Vue({
         el: '#app',
         data: {
-            message : 'coucou',
-            groceryList : [
-                {
-                    id : 0,
-                    text: "fromage"
-                },
-                {
-                    id : 2,
-                    text: "red"
-                }
-            ]
+            sketchbooks : sketchbooks
         }
     });
-    console.log("couou");
 
 
 

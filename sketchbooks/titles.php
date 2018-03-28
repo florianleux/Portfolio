@@ -1,18 +1,24 @@
 <?php
 
+
+
 $titles = array(
     array(
         'title' => 'Mon sketchbook number one',
-        'count' => 12
+        'id' => '1',
     ),
     array(
         'title' => 'Mon sketchbook number two',
-        'count' => 22
+        'id' => '2'
     ),
     array(
         'title' => 'Mon sketchbook number three',
-        'count' => 22
+        'id' => '3'
     )
 );
 
+foreach($titles as $key => $title){
+    $title['folder'] = $title['id'];
+    $titles[$key]['count'] = count(glob($title['id'].'/*.jpg'))-1;
+}
 echo json_encode($titles);
