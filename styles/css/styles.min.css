@@ -1,1 +1,1 @@
-body{background-image:url(img/bg.png)}header .logo{display:block;margin:50px auto 150px}
+body{background-image:url(img/bg.png)}.book-cover,header .logo{display:block;margin:50px auto 150px}.book-link:hover .book-cover{width:82%;-webkit-transform:rotate(3deg);transform:rotate(3deg)}.book-cover{width:80%;margin:auto}.book-item{min-height:300px;margin:20px 0}.book-modal{position:fixed;top:50%;left:50%;margin-left:-200px;padding:100px;background:#fff}

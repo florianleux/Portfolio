@@ -4,25 +4,53 @@
 
 $titles = array(
     array(
-        'title' => 'Mon sketchbook number one',
+        'title' => 'Travelers Railway',
+        'id' => '11',
+    ),
+    array(
+        'title' => 'Dracula A Loup-Garou',
+        'id' => '10',
+    ),
+    array(
+        'title' => 'Kame Burger',
+        'id' => '9',
+    ),
+    array(
+        'title' => 'Cuties',
+        'id' => '8',
+    ),
+    array(
+        'title' => 'Iguana Bay',
+        'id' => '7',
+    ),
+    array(
+        'title' => "Mickey's love",
+        'id' => '6',
+    ),
+    array(
+        'title' => 'Paxtown Girl',
+        'id' => '5',
+    ),
+    array(
+        'title' => 'Auberge de la Patchole',
         'id' => '1',
     ),
     array(
-        'title' => 'Mon sketchbook number two',
+        'title' => 'Fox',
         'id' => '2'
     ),
     array(
-        'title' => 'Mon sketchbook number three',
+        'title' => 'Rondoudou & Parker',
         'id' => '3'
     ),
     array(
-        'title' => 'Mon quatrième carnet',
+        'title' => 'H',
         'id' => '4'
     )
 );
 
 foreach($titles as $key => $title){
     $title['folder'] = $title['id'];
-    $titles[$key]['count'] = count(glob($title['id'].'/*.jpg'))-1;
+    $titles[$key]['count'] = count(glob($title['id'].'/*.jpg'));
 }
 echo json_encode($titles);

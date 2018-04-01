@@ -23,20 +23,37 @@
 
     <div class="row">
         <!-- Crée une instance du composant todo-list -->
-        <div class="book-item col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"
+        <div class="book-item col-12 col-sm-6 col-md-4 col-lg-3"
         v-for='item in sketchbooks'
         >
-            <a class="book-link" href="#">
-            <img class="book-cover" width="200" v-bind:src="'sketchbooks/'+item.id+'/cover.jpg'" alt="Couverture">
-           <div class="book-title"> {{ item.title}}</div>
+            <a v-on:click.prevent="select(item)" class="book-link" v-bind:data-id="item.id" v-bind:data-count="item.count" href="#">
+            <img class="book-cover"  v-bind:src="'sketchbooks/'+item.id+'/cover.png'" alt="Couverture">
+         <!--  <div class="book-title"> {{ item.title}}</div>-->
             </a>
         </div>
     </div>
+
+
+    <modal v-if="showModal" @close="showModal = false" v-bind:item-selected="itemSelected">
+
+    </modal>
 
 
 
 </div>
 
 </body>
+
+
+<script type="text/x-template" id="modal-template">
+   <div class="book-modal">
+       <span> Vous avez sélectionné {{ itemSelected.title }}</span>
+
+       <div>
+           <span v-for="n in itemSelected.count">"Une page" </span>
+       </div>
+   </div>
+</script>
+
 
 </html>
