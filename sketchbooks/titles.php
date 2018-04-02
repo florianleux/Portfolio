@@ -51,6 +51,6 @@ $titles = array(
 
 foreach($titles as $key => $title){
     $title['folder'] = $title['id'];
-    $titles[$key]['count'] = count(glob($title['id'].'/*.jpg'));
+    $titles[$key]['count'] = count(glob($title['id'].'/*.png'));
 }
 echo json_encode($titles);
