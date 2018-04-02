@@ -18,7 +18,7 @@ $(function() {
         template: '#modal-template',
         mounted: function(){
             var flipbook = $("#flipbook").turn({
-                width: ((Math.max(document.documentElement.clientHeight, window.innerHeight || 0))-350)*1.52 ,
+                width: ((Math.max(document.documentElement.clientHeight, window.innerHeight || 0))-350)*1.51845,
                 height: (Math.max(document.documentElement.clientHeight, window.innerHeight || 0))-350,
                 autoCenter: true,
                 duration: 1000,
