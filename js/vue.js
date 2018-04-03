@@ -23,13 +23,13 @@ $(function() {
                 autoCenter: true,
                 duration: 1000,
             });
-
+            
             document.onkeydown = function(e) {
 
                 switch (e.keyCode) {
                     case 37:
                         e.preventDefault();
-                        flipbook.turn("previous");
+                        flipbook.turn("next");
                         break;
                     case 38:
                         e.preventDefault();
@@ -37,7 +37,7 @@ $(function() {
                         break;
                     case 39:
                         e.preventDefault();
-                        flipbook.turn("next");
+                        flipbook.turn("previous");
                         break;
                     case 40:
                         e.preventDefault();
