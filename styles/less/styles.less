@@ -1,5 +1,6 @@
 body{
   background-image: url("img/bg.png");
+  padding-top: 150px;
 }
 
 *:focus, *:hover{
@@ -7,9 +8,22 @@ body{
 }
 
 header{
-  .logo{
-    display: block;
-    margin: 50px auto 150px auto;
+  position: absolute;
+  top: 35px;
+  text-align: center;
+  right: 0;
+  left: 0;
+
+  .home-link{
+  img{
+    -webkit-transition: width 0.2s;
+    -moz-transition: width 0.2s;
+    -ms-transition: width 0.2s;
+    -o-transition: width 0.2s;
+  }
+    &:hover{
+    img{width: 105px;}
+    }
   }
 }
 
@@ -50,5 +64,17 @@ header{
 
 #flipbook{
   margin: 20px auto;
+  .turn-page-wrapper{
+    -webkit-box-shadow: 0 0 41px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 41px 1px rgba(0,0,0,0.2);
+    box-shadow: 0 0 41px 1px rgba(0,0,0,0.2);
+  }
+}
 
+//Transitions
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }

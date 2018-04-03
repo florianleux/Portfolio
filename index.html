@@ -6,56 +6,62 @@
 <script src="bower_components/turnjs/turn.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script src="js/vue.js"></script>
-<link rel="stylesheet"  href="bower_components/bootstrap/dist/css/bootstrap.css"></link>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></link>
 <link rel="stylesheet" href="styles/css/styles.min.css">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 
-<body>
+<body >
+ <div id="app">
 
 <header>
-    <img width="100" class="logo" src="styles/images/sceau.png" alt="Toysovore">
+    <a v-on:click.prevent="showModal = false" class="home-link" href="#"><img width="100" src="styles/images/sceau.png" alt="Toysovore"></a>
 </header>
 
-<div id="app" class="container-fluid">
-
+<div  class="container-fluid">
 
     <div class="row">
 
         <!-- Crée une instance du composant todo-list -->
-        <div  v-if="!showModal" class="book-item col-12 col-sm-6 col-md-4 col-lg-3"
-        v-for='item in sketchbooks'
+
+        <div v-if="!showModal" class="book-item col-12 col-sm-6 col-md-4 col-lg-3"
+             v-for='item in sketchbooks'
         >
-            <a v-on:click.prevent="select(item)" class="book-link" v-bind:data-id="item.id" v-bind:data-count="item.count" href="#">
-            <img class="book-cover"  v-bind:src="'sketchbooks/'+item.id+'/cover.png'" alt="Couverture">
-         <!--  <div class="book-title"> {{ item.title}}</div>-->
+
+            <a v-on:click.prevent="select(item)" class="book-link" v-bind:data-id="item.id"
+               v-bind:data-count="item.count" href="#">
+                <img class="book-cover" v-bind:src="'sketchbooks/'+item.id+'/cover.png'" alt="Couverture">
             </a>
+
         </div>
 
+        <transition name="fade">
         <modal v-if="showModal" @close="showModal = false" v-bind:item-selected="itemSelected">
-
         </modal>
+        </transition>
 
+
+        <!--Chargement caché des couvertures pour éviter bug affichage carnets-->
+        <div class="d-none"
+             v-for='item in sketchbooks'>
+                <img class="book-cover" v-bind:src="'sketchbooks/'+item.id+'/0.png'">
+        </div>
 
     </div>
-
-
-
-
 </div>
-
+ </div>
 </body>
-
 
 <script type="text/x-template" id="modal-template">
 
-   <div @keyup.esc="$emit('close')"  tabindex="0"  class="col-lg-12">
-       <div id="flipbook">
-               <img v-for="(n, index) in itemSelected.count-1" class="page-img" v-bind:src="'sketchbooks/'+itemSelected.id+'/'+index+'.png'" alt=""/>
-       </div>
-   </div>
+    <div @keyup.esc="$emit('close')" tabindex="0" class="col-lg-12">
+        <div id="flipbook">
+            <img  v-for="(n, index) in itemSelected.count-1" class="page-img"
+                 v-bind:src="'sketchbooks/'+itemSelected.id+'/'+index+'.png'" alt=""/>
+        </div>
+    </div>
 </script>
 
 

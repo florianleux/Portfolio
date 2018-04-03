@@ -6,7 +6,7 @@ $(function() {
         url: "sketchbooks/titles.php",
         async: false,
         success: function (response){
-             sketchbooks = JSON.parse(response)
+                 sketchbooks = JSON.parse(response)
         }
     });
 
@@ -18,8 +18,8 @@ $(function() {
         template: '#modal-template',
         mounted: function(){
             var flipbook = $("#flipbook").turn({
-                width: ((Math.max(document.documentElement.clientHeight, window.innerHeight || 0))-350)*1.51845,
-                height: (Math.max(document.documentElement.clientHeight, window.innerHeight || 0))-350,
+                width: ((Math.max(document.documentElement.clientHeight, window.innerHeight || 0))-200)*1.51845,
+                height: (Math.max(document.documentElement.clientHeight, window.innerHeight || 0))-200,
                 autoCenter: true,
                 duration: 1000,
             });
@@ -56,9 +56,12 @@ $(function() {
             showModal : false
         },
         methods: {
-            select: function(item){
+            select: function(item) {
                 this.itemSelected = item;
                 this.showModal = true
+            },
+            closeModal: function(){
+                this.showModal = false;
             }
 
         }
