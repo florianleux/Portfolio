@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="styles/css/styles.min.css">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Toysovore - Cartoonist</title>
 </head>
 
 <body >
@@ -24,11 +24,8 @@
 
     <div class="row">
 
-        <!-- Crée une instance du composant todo-list -->
-
         <div v-if="!showModal" class="book-item col-12 col-sm-6 col-md-4 col-lg-3"
-             v-for='item in sketchbooks'
-        >
+             v-for='item in sketchbooks'>
 
             <a v-on:click.prevent="select(item)" class="book-link" v-bind:data-id="item.id"
                v-bind:data-count="item.count" href="#">
@@ -60,6 +57,16 @@
         <div id="flipbook">
             <img  v-for="(n, index) in itemSelected.count-1" class="page-img"
                  v-bind:src="'sketchbooks/'+itemSelected.id+'/'+index+'.png'" alt=""/>
+        </div>
+
+        <div v-if="showHelp" class="help-modal">
+          <p>
+              Use the Left and Right arrow keys to navigate within the sketchbook !</br>
+              You can also click on the top corner of the page you want to flip.
+          </p>
+            <img class="help-img" src="styles/images/clippy.png" alt="Clippy !">
+            <a href="#" v-on:click.prevent="showHelp = false">X</a>
+            
         </div>
     </div>
 </script>

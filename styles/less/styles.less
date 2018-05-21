@@ -64,8 +64,48 @@ header{
 
 #flipbook{
   margin: 20px auto;
+  overflow: hidden;
 }
 
+p{
+  margin: 0;
+}
+
+.help-modal{
+  font-family: arial;
+  font-size: .8em;
+  font-weight: 700;
+  position: fixed;
+  right: 18px;
+  bottom: 90px;
+  width: 300px;
+  max-width: 100%;
+  padding: 10px 20px;
+  text-align: center;
+  color: #1d0742;
+  border: 1px solid #1d0742;
+  border-radius: 5px;
+  background: #ffc;
+
+  -moz-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Firefox */
+  -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Safari and Chrome */
+  -o-animation: cssAnimation 0s ease-in 5s forwards;
+  /* Opera */
+  animation: cssAnimation 0s ease-in 5s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+}
+
+
+.help-img{
+  position: absolute;
+  top: 90px;
+  right: 0;
+  width: 80px;
+}
 //Transitions
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;
@@ -73,3 +113,4 @@ header{
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+
