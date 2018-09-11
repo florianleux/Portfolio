@@ -17,59 +17,39 @@
  <div id="app">
 
 <header>
-    <a v-on:click.prevent="showModal = false" class="home-link" href="#"><img width="100" src="styles/images/sceau.png" alt="Toysovore"></a>
+    <a class="home-link navbar-brand" href="#"><img width="50" src="styles/images/sceau.png" alt="Toysovore"> <div>TOYSOVORE</div></a>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">INFO<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">SHOP</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
-<div  class="container-fluid">
+    <div  class="container-fluid">
 
-    <div class="row">
-
-        <div v-if="!showModal" class="book-item col-12 col-sm-6 col-md-4 col-lg-3"
-             v-for='item in sketchbooks'>
-
-            <a v-on:click.prevent="select(item)" class="book-link" v-bind:data-id="item.id"
-               v-bind:data-count="item.count" href="#">
-                <img class="book-cover" v-bind:src="'sketchbooks/'+item.id+'/cover.png'" alt="Couverture">
-            </a>
+        <div class="row">
 
         </div>
-
-        <transition name="fade">
-        <modal v-if="showModal" @close="showModal = false" v-bind:item-selected="itemSelected">
-        </modal>
-        </transition>
-
-
-        <!--Chargement caché des couvertures pour éviter bug affichage carnets-->
-        <div class="d-none"
-             v-for='item in sketchbooks'>
-                <img class="book-cover" v-bind:src="'sketchbooks/'+item.id+'/0.jpg'">
-        </div>
-
     </div>
-</div>
  </div>
 </body>
 
-<script type="text/x-template" id="modal-template">
-
-    <div @keyup.esc="$emit('close')" tabindex="0" class="col-lg-12">
-        <div id="flipbook">
-            <img  v-for="(n, index) in itemSelected.count-1" class="page-img"
-                 v-bind:src="'sketchbooks/'+itemSelected.id+'/'+index+'.jpg'" alt=""/>
-        </div>
-
-        <div v-if="showHelp" class="help-modal">
-          <p>
-              Use the Left and Right arrow keys to navigate within the sketchbook !</br>
-              You can also click on the top corner of the page you want to flip.
-          </p>
-            <img class="help-img" src="styles/images/clippy.png" alt="Clippy !">
-            <a href="#" v-on:click.prevent="showHelp = false">X</a>
-            
-        </div>
-    </div>
-</script>
 
 
 </html>
