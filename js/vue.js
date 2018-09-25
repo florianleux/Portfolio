@@ -2,7 +2,7 @@ $(function() {
 
 
     $.ajax({
-        url: "sketchbooks/titles.php",
+        url: "sketchbooks/categories.php",
         async: false,
         success: function (response){
                  categories = JSON.parse(response)

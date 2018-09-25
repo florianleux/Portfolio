@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42b00d12-7d33-4427-b82e-ae32458de681" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/vue.js" afterPath="$PROJECT_DIR$/js/vue.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sketchbooks/categories.php" afterPath="$PROJECT_DIR$/sketchbooks/categories.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +22,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+            <state relative-caret-position="558">
+              <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -34,8 +32,8 @@
       <file leaf-file-name="vue.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/vue.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="408">
+              <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -92,8 +90,8 @@
         <option value="$PROJECT_DIR$/sketchbooks/titles.php" />
         <option value="$PROJECT_DIR$/styles/less/styles.less" />
         <option value="$PROJECT_DIR$/sketchbooks/categories.php" />
-        <option value="$PROJECT_DIR$/js/vue.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/vue.js" />
       </list>
     </option>
   </component>
@@ -125,8 +123,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="-43" />
+    <option name="y" value="244" />
     <option name="width" value="1696" />
     <option name="height" value="1026" />
   </component>
@@ -156,32 +154,6 @@
             <path>
               <item name="toysovore" type="b2602c69:ProjectViewProjectNode" />
               <item name="toysovore" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="toysovore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="toysovore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="toysovore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="toysovore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="node_tools" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="toysovore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="toysovore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sketchbooks" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="toysovore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="toysovore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="toysovore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="toysovore" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="styles" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="less" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -361,12 +333,12 @@
       <workItem from="1522766986268" duration="181000" />
       <workItem from="1526907979496" duration="8811000" />
       <workItem from="1536664273897" duration="2830000" />
-      <workItem from="1537873679646" duration="1873000" />
+      <workItem from="1537873679646" duration="2491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64002000" />
+    <option name="totallyTimeSpent" value="64620000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -763,6 +735,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/vue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="39" lean-forward="true" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/sketchbooks/categories.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -771,18 +751,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/vue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="39" column="14" lean-forward="true" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        <state relative-caret-position="558">
+          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="32" />
           <folding />
         </state>
       </provider>
