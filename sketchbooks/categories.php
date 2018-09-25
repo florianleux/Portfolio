@@ -8,12 +8,12 @@ $categories = array(
         'id' => '1',
     ),
     array(
-        'title' => 'Characters',
-        'id' => '1',
+        'title' => 'Digital Art',
+        'id' => '2',
     ),
     array(
-        'title' => 'Characters',
-        'id' => '1',
+        'title' => 'Blobby Skeletons',
+        'id' => '3',
     )
 );
 

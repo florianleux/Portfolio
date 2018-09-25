@@ -5,7 +5,7 @@ $(function() {
         url: "sketchbooks/titles.php",
         async: false,
         success: function (response){
-                 sketchbooks = JSON.parse(response)
+                 categories = JSON.parse(response)
         }
     });
 
@@ -14,6 +14,7 @@ $(function() {
     new Vue({
         el: '#app',
         data: {
+            categories : categories
         },
         methods: {
             select: function(item) {
