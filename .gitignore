@@ -18,3 +18,4 @@ yarn-debug.log*
 *.njsproj
 *.sln
 *.sw*
+.idea/workspace.xml
