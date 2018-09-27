@@ -1,30 +1,93 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> 
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="logo-zone">
+                        <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
+                        <div class="brand">TOYSOVORE</div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="nav-bar" id="nav">
+                  <router-link to="/">About</router-link>
+                  <router-link to="/portfolio">My Work</router-link>
+                  <router-link to="/shop">Shop</router-link>
+            </div>
+        </div>
+
     </div>
-    <router-view/>
   </div>
 </template>
-
 <style lang="scss">
+
+@import'../node_modules/bootstrap/scss/bootstrap.scss';
+
+@font-face {
+    font-family: 'Moon Get';
+    src: url('./assets/fonts/moon_get-Heavy.otf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quick Sand';
+    src: url('./assets/fonts/Quicksand_Book.otf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Quick Sand';
+    src: url('./assets/fonts/Quicksand_Bold.otf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+body{
+  background: url("./assets/lightpaperfibers.png");
+  padding: 0 50px;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+
+  font-family: 'Moon Get', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+
   color: #2c3e50;
-  background: yellow;
+
 }
 #nav {
-  padding: 30px;
+    font-family: 'Quick Sand';
+    font-size: 15px;
+    line-height: 90px;
+    float: right;
+    margin-right: 15px;
+ font-size: 15px;
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    text-transform : uppercase;
+    margin: 0 10px;
+    color: #b5b5b5;
+    text-decoration: none;
     &.router-link-exact-active {
-      color: #42b983;
+      color: #d1060c;
+      font-weight: 900;
     }
   }
 }
+
+.logo-zone{
+    margin-top: 15px;
+    padding-left: 15px;
+    float: left;
+}
+
+.brand{
+    vertical-align: middle;
+    font-size: 25px;
+    padding: 0 0 0 20px;
+    display: inline-block;
+}
+
 </style>
