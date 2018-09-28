@@ -24,7 +24,6 @@
 </template>
 
 
-
 <style lang="scss">
 
 @import'../node_modules/bootstrap/scss/bootstrap.scss';
@@ -65,6 +64,16 @@ body{
   color: #2c3e50;
 
 }
+
+.page-title{
+    text-align:center;
+    margin: 50px 0 100px 0;
+    font-family: 'Quick Sand';
+    font-size: 3em;
+    color: #d20b10;
+    text-transform: uppercase;
+}
+
 #nav {
     font-family: 'Quick Sand';
     font-size: 15px;

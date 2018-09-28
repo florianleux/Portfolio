@@ -1,17 +1,26 @@
 
 
 <template>
-  <div class="categories-list row">
-    <div v-for="category in categories"  :key="category" class="category col-sm-3">
-      {{ category.name }}
-    </div>
+<div class="content">
+
+  <div class="page-title">
+    PORTFOLIO CATEGORIES
   </div>
+
+  <div class="categories-list row">
+    <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-md-4">
+      <img class="cover" :src="'./portfolio/'+category.name+'/cover.jpg'"/>
+      <span class="title">{{ category.name }}</span>
+    </router-link>
+  </div>
+</div>
+
 </template>
 
 <script>
 
-  import jQuery from 'jquery'
-  let $ = jQuery
+    import jQuery from 'jquery'
+    let $ = jQuery
 
   var categories,folder ;
 
@@ -22,13 +31,15 @@
       folder = 'php';
   }
 
-  $.ajax({
-      url: "/"+folder+"/categories.php",
-      async: false,
-      success: function (response){
-          categories = JSON.parse(response)
-      }
-  });
+    $.post({
+        url: "/"+folder+"/categories.php",
+        data: {method: "getCategoriesList" },
+        success: function (response){
+            categories = JSON.parse(response);
+        }
+    });
+
+
 
 export default {
   data() {
@@ -38,3 +49,24 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+  .category{
+    .cover{
+      max-width: 100%;
+      display: block;
+      margin: auto;
+      opacity: 0.5;
+    }
+    .title{
+      display: block;
+      text-transform: uppercase;
+      font-size: 2em;
+      text-align: center;
+      text-shadow: 0px 3px 7px white;
+      font-family: 'Quick Sand';
+    }
+  }
+
+</style>
