@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="row">
+    <div class="row" id="topBar">
         <div class="col-sm-6">
             <div class="logo-zone">
                         <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
@@ -15,9 +15,14 @@
             </div>
         </div>
 
+
     </div>
+      <div id="main">
+          <router-view/>
+      </div>
   </div>
 </template>
+
 
 
 <style lang="scss">

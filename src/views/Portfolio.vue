@@ -1,41 +1,40 @@
-<template>
-  <div class="home">
 
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+<template>
+  <div class="categories-list row">
+    <div v-for="category in categories"  :key="category" class="category col-sm-3">
+      {{ category.name }}
+    </div>
   </div>
 </template>
 
 <script>
 
-import jQuery from 'jquery'
-let $ = jQuery
+  import jQuery from 'jquery'
+  let $ = jQuery
 
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  var categories,folder ;
 
-var categories,folder ;
+   // En Dev , redirection des requetes vers le serveur Apache
+  if (process.env.NODE_ENV === 'development'){
+      folder = 'api';
+  }else{
+      folder = 'php';
+  }
 
-     // En Dev , redirection des requetes vers le serveur Apache
-    if (process.env.NODE_ENV === 'development'){
-        folder = 'api';
-    }else{
-        folder = 'php';
-    }
-
-    $.ajax({
-        url: "/"+folder+"/categories.php",
-        async: false,
-        success: function (response){
-            console.log(response);
-            categories = JSON.parse(response)
-        }
-    });
-
+  $.ajax({
+      url: "/"+folder+"/categories.php",
+      async: false,
+      success: function (response){
+          categories = JSON.parse(response)
+      }
+  });
 
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  data() {
+      return {
+        categories: categories
+      }
   }
 }
 </script>
