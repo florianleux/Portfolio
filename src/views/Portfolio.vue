@@ -1,41 +1,72 @@
-<template>
-  <div class="home">
 
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+<template>
+<div class="content">
+
+  <div class="page-title">
+    PORTFOLIO CATEGORIES
   </div>
+
+  <div class="categories-list row">
+    <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-md-4">
+      <img class="cover" :src="'./portfolio/'+category.name+'/cover.jpg'"/>
+      <span class="title">{{ category.name }}</span>
+    </router-link>
+  </div>
+</div>
+
 </template>
 
 <script>
 
-import jQuery from 'jquery'
-let $ = jQuery
+    import jQuery from 'jquery'
+    let $ = jQuery
 
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+  var categories,folder ;
 
-var categories,folder ;
+   // En Dev , redirection des requetes vers le serveur Apache
+  if (process.env.NODE_ENV === 'development'){
+      folder = 'api';
+  }else{
+      folder = 'php';
+  }
 
-     // En Dev , redirection des requetes vers le serveur Apache
-    if (process.env.NODE_ENV === 'development'){
-        folder = 'api';
-    }else{
-        folder = 'php';
-    }
-
-    $.ajax({
+    $.post({
         url: "/"+folder+"/categories.php",
-        async: false,
+        data: {method: "getCategoriesList" },
         success: function (response){
-            console.log(response);
-            categories = JSON.parse(response)
+            categories = JSON.parse(response);
         }
     });
 
 
+
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  data() {
+      return {
+        categories: categories
+      }
   }
 }
 </script>
+
+<style lang="scss">
+
+  .category{
+    .cover{
+      max-width: 100%;
+      display: block;
+      margin: auto;
+      opacity: 0.5;
+    }
+    .title{
+      display: block;
+      text-transform: uppercase;
+      font-size: 2em;
+      text-align: center;
+      text-shadow: 0px 3px 7px white;
+      font-family: 'Quick Sand';
+    }
+  }
+
+</style>

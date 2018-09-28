@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="row">
+    <div class="row" id="topBar">
         <div class="col-sm-6">
             <div class="logo-zone">
                         <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
@@ -15,7 +15,11 @@
             </div>
         </div>
 
+
     </div>
+      <div id="main">
+          <router-view/>
+      </div>
   </div>
 </template>
 
@@ -60,6 +64,16 @@ body{
   color: #2c3e50;
 
 }
+
+.page-title{
+    text-align:center;
+    margin: 50px 0 100px 0;
+    font-family: 'Quick Sand';
+    font-size: 3em;
+    color: #d20b10;
+    text-transform: uppercase;
+}
+
 #nav {
     font-family: 'Quick Sand';
     font-size: 15px;

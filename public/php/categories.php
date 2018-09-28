@@ -1,15 +1,20 @@
 <?php
 
-$categories = array(
-    array(
-        'title' => 'COUCOU',
-        'id' => '1',
-    )
-);
 
-//foreach($categories as $key => $category){
-//    $category['folder'] = $category['id'];
-//    $categories[$key]['count'] = count(glob('../portfolio/'.$category['id'].'/*.jpg'));
-//}
+if ($_REQUEST['method']==='getCategoryCount') {
+        $count = count(glob('../portfolio/'.$_REQUEST['category'].'/*.jpg'));
+        echo ($count);
+}
+else if ($_REQUEST['method']==='getCategoriesList') {
 
-echo json_encode($categories);
+    $folders = array_filter(glob('../portfolio/*'), 'is_dir');
+    $categories = [];
+
+    foreach($folders as $key => $folder){
+        $categories[$key]['name'] = basename($folder);
+    }
+
+    echo json_encode($categories);
+}
+
+

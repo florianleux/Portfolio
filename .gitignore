@@ -19,3 +19,4 @@ yarn-debug.log*
 *.sln
 *.sw*
 .idea/workspace.xml
+.idea/workspace.xml
