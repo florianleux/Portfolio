@@ -2,7 +2,7 @@
 
 $categories = array(
     array(
-        'title' => 'Characters',
+        'title' => 'COUCOU',
         'id' => '1',
     )
 );
