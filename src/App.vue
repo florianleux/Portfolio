@@ -9,14 +9,13 @@
         </div>
         <div class="col-sm-6">
           <div class="nav-bar" id="nav">
-                  <router-link to="/">About</router-link>
-                  <router-link to="/portfolio">My Work</router-link>
-                  <router-link to="/shop">Shop</router-link>
+              <router-link to="/">About</router-link>
+              <router-link to="/portfolio">My Work</router-link>
+              <a href="https://toysovore.patternbyetsy.com" target="_blank">Shop</a>
             </div>
         </div>
-
-
     </div>
+
       <div id="main">
           <router-view/>
       </div>
@@ -52,7 +51,17 @@
 
 body{
   background: url("./assets/lightpaperfibers.png");
-  padding: 0 50px;
+    padding: 0 10%;
+}
+
+a{
+    color:#2c3e50;
+    text-decoration: none;
+    &:hover{
+        color: #d20b10;
+        text-decoration:none;
+    }
+
 }
 
 #app {

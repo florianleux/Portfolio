@@ -8,7 +8,7 @@
   </div>
 
   <div class="categories-list row">
-    <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-md-4">
+    <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-md-3">
       <img class="cover" :src="'./portfolio/'+category.name+'/cover.jpg'"/>
       <span class="title">{{ category.name }}</span>
     </router-link>
@@ -22,42 +22,51 @@
     import jQuery from 'jquery'
     let $ = jQuery
 
-  var categories,folder ;
-
-   // En Dev , redirection des requetes vers le serveur Apache
-  if (process.env.NODE_ENV === 'development'){
-      folder = 'api';
-  }else{
-      folder = 'php';
-  }
-
-    $.post({
-        url: "/"+folder+"/categories.php",
-        data: {method: "getCategoriesList" },
-        success: function (response){
-            categories = JSON.parse(response);
-        }
-    });
-
-
+    var categories,folder ;
 
 export default {
   data() {
       return {
         categories: categories
       }
-  }
+  },
+    beforeCreate() {
+        // En Dev , redirection des requetes vers le serveur Apache
+        if (process.env.NODE_ENV === 'development'){
+            folder = 'api';
+        }else{
+            folder = 'php';
+        }
+
+        $.post({
+            url: "/"+folder+"/categories.php",
+            data: {method: "getCategoriesList" },
+            async: false,
+            success: function (response){
+                categories = JSON.parse(response);
+            }
+        });
+    }
 }
+
+
+
 </script>
 
 <style lang="scss">
 
   .category{
+    margin-bottom:50px;
     .cover{
       max-width: 100%;
       display: block;
-      margin: auto;
-      opacity: 0.5;
+      margin: 20px auto;
+      box-shadow: 0px 0px 20px #0000000d;
+      height: 280px;
+      opacity : 0.7;
+    }
+    &:hover .cover{
+      opacity:1;
     }
     .title{
       display: block;
