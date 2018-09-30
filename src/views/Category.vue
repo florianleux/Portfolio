@@ -8,15 +8,11 @@
         </div>
 
         <div class="img-list row">
-            <!--<div class="col-sm-6 col-md-4 col-lg-3 " v-for="(n, index) in category.count" :key="index" >-->
-                <!--<img :src="'./portfolio/'+category.name+'/'+(index+1)+'.jpg'" alt="">-->
-            <!--</div>-->
             <div class="col-lg-4 col-md-6">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in tiersList(1,category.count)" :key="index" >
-                        <section v-scroll-reveal>
-                            <img :src="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
-                        </section>
+                            <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
+
                     </div>
                 </div>
             </div>
@@ -24,18 +20,14 @@
             <div class="col-lg-4 col-md-6 ">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in tiersList(2,category.count)" :key="index" >
-                        <section v-scroll-reveal>
-                            <img :src="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
-                        </section>
+                            <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-6 " v-for="(n, index) in tiersList(3,category.count)" :key="index" >
-                        <section v-scroll-reveal>
-                            <img :src="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
-                        </section>
+                            <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
                     </div>
                 </div>
             </div>
