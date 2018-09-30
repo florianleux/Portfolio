@@ -3,7 +3,8 @@
 
 if ($_REQUEST['method']==='getCategoryCount') {
         $count = count(glob('../portfolio/'.$_REQUEST['category'].'/*.jpg'));
-        echo ($count);
+        //On renvoie le compte -1 car on enleve la cover
+        echo ($count-1);
 }
 else if ($_REQUEST['method']==='getCategoriesList') {
 
