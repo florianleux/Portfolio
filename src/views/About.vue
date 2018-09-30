@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-  <div class="page-title">Welcome !</div>
+    <div class="page-title">Welcome !</div>
     <div class="content">
       <div class="row">
         <div class="col-lg-4 portrait">
