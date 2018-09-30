@@ -1,60 +1,51 @@
-
-
 <template>
-<div class="content">
+  <div class="content">
+    <div class="page-title">
+      PORTFOLIO CATEGORIES
+    </div>
 
-  <div class="page-title">
-    PORTFOLIO CATEGORIES
+    <div class="categories-list row">
+      <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-md-3">
+        <img class="cover" :src="'./portfolio/'+category.name+'/cover.jpg'"/>
+        <span class="title">{{ category.name }}</span>
+      </router-link>
+    </div>
   </div>
-
-  <div class="categories-list row">
-    <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-md-3">
-      <img class="cover" :src="'./portfolio/'+category.name+'/cover.jpg'"/>
-      <span class="title">{{ category.name }}</span>
-    </router-link>
-  </div>
-</div>
-
 </template>
 
 <script>
+  import jQuery from 'jquery'
+  let $ = jQuery
 
-    import jQuery from 'jquery'
-    let $ = jQuery
+  var categories,folder ;
 
-    var categories,folder ;
-
-export default {
-  data() {
-      return {
-        categories: categories
-      }
-  },
-    beforeCreate() {
-        // En Dev , redirection des requetes vers le serveur Apache
-        if (process.env.NODE_ENV === 'development'){
-            folder = 'api';
-        }else{
-            folder = 'php';
+  export default {
+    data() {
+        return {
+          categories: categories
         }
+    },
+      beforeCreate() {
+          // En Dev , redirection des requetes vers le serveur Apache
+          if (process.env.NODE_ENV === 'development'){
+              folder = 'api';
+          }else{
+              folder = 'php';
+          }
 
-        $.post({
-            url: "/"+folder+"/categories.php",
-            data: {method: "getCategoriesList" },
-            async: false,
-            success: function (response){
-                categories = JSON.parse(response);
-            }
-        });
-    }
-}
-
-
-
+          $.post({
+              url: "/"+folder+"/categories.php",
+              data: {method: "getCategoriesList" },
+              async: false,
+              success: function (response){
+                  categories = JSON.parse(response).sort(function() { return 0.5 - Math.random() });
+              }
+          });
+      }
+  }
 </script>
 
 <style lang="scss">
-
   .category{
     margin-bottom:50px;
     .cover{
@@ -77,5 +68,4 @@ export default {
       font-family: 'Quick Sand';
     }
   }
-
 </style>
