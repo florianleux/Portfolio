@@ -3,29 +3,29 @@
        <div class="row">
            <div class="col-12 col-sm-6">
                <img class="logo" width="70" src="./../assets/sceau.png" alt="Logo Toysovore">
-
-
            </div>
-           <div class="social-zone col-12 col-sm-6 row">
-               <div class="col-3 social-link">
-                   <a title="Follow me on Instagram" href="https://www.instagram.com/toysovore" target="_blank">
-                       <i class="fab fa-instagram"></i>
-                   </a>
-               </div>
-               <div class="col-3 social-link">
-                   <a title="Twitter" href="https://twitter.com/toysovore" target="_blank">
-                       <i class="fab fa-twitter"></i>
-                   </a>
-               </div>
-               <div class="col-3 social-link">
-                   <a title="My Youtube Channel" href="https://www.youtube.com/channel/UCMdI8V_a3MWTKoqWRpvMQZw" target="_blank">
-                       <i class="fab fa-youtube"></i>
-                   </a>
-               </div>
-               <div class="col-3 social-link">
-                   <a title="Join me on Twitch !" href="https://www.twitch.tv/toysovore" target="_blank">
-                       <i class="fab fa-twitch"></i>
-                   </a>
+           <div class="social-zone col-12 col-sm-6">
+               <div class="row">
+                   <div class="col-3 social-link">
+                       <a title="Follow me on Instagram" href="https://www.instagram.com/toysovore" target="_blank">
+                           <i class="fab fa-instagram"></i>
+                       </a>
+                   </div>
+                   <div class="col-3 social-link">
+                       <a title="Twitter" href="https://twitter.com/toysovore" target="_blank">
+                           <i class="fab fa-twitter"></i>
+                       </a>
+                   </div>
+                   <div class="col-3 social-link">
+                       <a title="My Youtube Channel" href="https://www.youtube.com/channel/UCMdI8V_a3MWTKoqWRpvMQZw" target="_blank">
+                           <i class="fab fa-youtube"></i>
+                       </a>
+                   </div>
+                   <div class="col-3 social-link">
+                       <a title="Join me on Twitch !" href="https://www.twitch.tv/toysovore" target="_blank">
+                           <i class="fab fa-twitch"></i>
+                       </a>
+                   </div>
                </div>
 
            </div>
@@ -41,10 +41,6 @@
 
    </footer>
 </template>
-
-
-<script>
-</script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
