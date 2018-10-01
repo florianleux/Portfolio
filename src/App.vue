@@ -3,13 +3,15 @@
     <div class="row" id="topBar">
         <div class="col-sm-6 col-12">
             <div class="logo-zone">
-                <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
-                <div class="brand">TOYSOVORE</div>
+                <router-link to="/">
+                    <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
+                    <div class="brand">TOYSOVORE</div>
+                </router-link>
             </div>
         </div>
         <div class="col-sm-6">
           <div class="nav-bar" id="nav">
-              <router-link to="/">About</router-link>
+              <router-link to="/">Info</router-link>
               <router-link to="/portfolio">My Work</router-link>
               <a href="https://toysovore.patternbyetsy.com" target="_blank">Shop</a>
             </div>
@@ -72,6 +74,9 @@
             color: #d20b10;
             text-decoration:none;
         }
+        &:focus, &:active{
+            color: inherit;
+        }
     }
 
     #app {
@@ -93,7 +98,7 @@
     #nav {
         font-family: 'Quick Sand';
         font-size: 15px;
-        line-height: 90px;
+        line-height: 102px;
         float: right;
         margin-right: 15px;
         font-size: 15px;
