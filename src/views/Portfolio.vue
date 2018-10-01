@@ -49,11 +49,10 @@
   .category{
     margin-bottom:50px;
     .cover{
-      max-width: 100%;
       display: block;
       margin: 20px auto;
-      height: 280px;
       opacity : 0.7;
+      max-width: 100%;
     }
     &:hover .cover{
       opacity:1;

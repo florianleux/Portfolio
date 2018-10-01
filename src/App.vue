@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="row" id="topBar">
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-12">
             <div class="logo-zone">
                 <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
                 <div class="brand">TOYSOVORE</div>
@@ -19,11 +19,25 @@
       <div id="main">
           <router-view/>
       </div>
+
+      <FooterTemplate></FooterTemplate>
+
   </div>
 </template>
 
+<script>
+    import FooterTemplate from './components/Footer.vue'
+
+    export default {
+        components: {
+            FooterTemplate
+        }
+    }
+</script>
+
 <style lang="scss">
     @import'../node_modules/bootstrap/scss/bootstrap.scss';
+    @import'../styles/responsive.scss';
 
     @font-face {
         font-family: 'Moon Get';

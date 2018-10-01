@@ -6,7 +6,7 @@
 
     <vue-instagram :token="token" username="toysovore" :count="8" class="feed-container row">
       <template slot="feeds" slot-scope="props">
-          <div class="col-lg-3 col-md-4 col-6 post-container ">
+          <div class="col-lg-3 col-6 post-container ">
             <a :href="props.feed.link" target="_blank" class="post-link">
               <img :src=" props.feed.images.standard_resolution.url " alt="" class="post">
             </a>
@@ -28,7 +28,7 @@
 
 export default {
     components: {
-        VueInstagram
+        "vue-instagram" : VueInstagram
     },
     data: function(){
         return {
