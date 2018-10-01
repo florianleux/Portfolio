@@ -1,14 +1,39 @@
 /* Smartphones (portrait and landscape) ----------- */
-@media
-(min-device-width : 320px)
-and (max-device-width : 480px) {
+@media (max-device-width : 480px) {
   #app{
     #nav{
       float:none;
+      margin:0;
       text-align:center;
       a{
         font-size: 1.4em;
       }
+    }
+
+    .sub-content{
+      margin:20px;
+    }
+
+    .category{
+      .cover{
+        opacity:1;
+      }
+    }
+
+    .logo-zone{
+      padding:0;
+      float: none;
+      img{
+        display: block;
+        margin: 10px auto;
+      }
+    }
+
+    .brand{
+      text-align: center;
+      padding: 0;
+      display: block;
+      float: none;
     }
 
     .about-text{
@@ -27,8 +52,14 @@ and (max-device-width : 480px) {
     footer .logo{
       display:none;
     }
+    .social-link{
+      text-align:center;
+    }
     .page-title{
       font-size:2em;
+    }
+    .credits{
+      strong{display:block;}
     }
     .title{
       font-size: 1.5em;

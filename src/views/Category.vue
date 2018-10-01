@@ -8,21 +8,21 @@
             <div class="col-lg-4 col-md-6">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in columns[0]" :key="index" >
-                            <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
+                            <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 ">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in columns[1]" :key="index" >
-                        <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
+                        <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-6" v-for="(n, index) in columns[2]" :key="index" >
-                        <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
+                        <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
                     </div>
                 </div>
             </div>
