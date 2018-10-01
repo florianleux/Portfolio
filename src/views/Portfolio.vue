@@ -6,7 +6,7 @@
 
     <div class="categories-list row">
       <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-lg-4">
-        <img class="cover" :src="'./portfolio/'+category.name+'/cover.jpg'"/>
+        <img class="cover" :src="'./portfolio/'+category.name+'/cover.png'"/>
         <span class="title">{{ category.name }}</span>
       </router-link>
     </div>
@@ -52,7 +52,6 @@
       max-width: 100%;
       display: block;
       margin: 20px auto;
-      box-shadow: 0px 0px 20px #0000000d;
       height: 280px;
       opacity : 0.7;
     }

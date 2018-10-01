@@ -21,7 +21,7 @@
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="row">
-                    <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in columns[2]" :key="index" >
+                    <div class="img-item col-lg-12 col-md-6" v-for="(n, index) in columns[2]" :key="index" >
                         <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
                     </div>
                 </div>
