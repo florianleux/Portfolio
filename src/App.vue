@@ -69,7 +69,7 @@
 
     .page-title{
         text-align:center;
-        margin: 50px 0 100px 0;
+        margin: 30px 0;
         font-family: 'Quick Sand';
         font-size: 3em;
         color: #d20b10;
@@ -108,6 +108,19 @@
         font-size: 25px;
         padding: 0 0 0 20px;
         display: inline-block;
+    }
+
+    .subtitle {
+        font-family : "Quick Sand";
+        text-transform : capitalize;
+        color: #d20b10;
+        text-align : center;
+        a{color: #d20b10;}
+        font-size: 25px;
+        padding : 30px 0;
+    }
+    .sub-content{
+        margin-top: 70px;
     }
 </style>
 

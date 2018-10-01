@@ -1,11 +1,11 @@
 <template>
-  <div class="content">
+  <div class="sub-content">
     <div class="page-title">
       PORTFOLIO CATEGORIES
     </div>
 
     <div class="categories-list row">
-      <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-md-3">
+      <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-lg-4">
         <img class="cover" :src="'./portfolio/'+category.name+'/cover.jpg'"/>
         <span class="title">{{ category.name }}</span>
       </router-link>
