@@ -1,15 +1,17 @@
 <template>
   <div id="app">
     <div class="row" id="topBar">
-        <div class="col-sm-6">
+        <div class="col-sm-6 col-12">
             <div class="logo-zone">
-                <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
-                <div class="brand">TOYSOVORE</div>
+                <router-link to="/">
+                    <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
+                    <div class="brand">TOYSOVORE</div>
+                </router-link>
             </div>
         </div>
         <div class="col-sm-6">
           <div class="nav-bar" id="nav">
-              <router-link to="/">About</router-link>
+              <router-link to="/">Info</router-link>
               <router-link to="/portfolio">My Work</router-link>
               <a href="https://toysovore.patternbyetsy.com" target="_blank">Shop</a>
             </div>
@@ -19,11 +21,25 @@
       <div id="main">
           <router-view/>
       </div>
+
+      <FooterTemplate></FooterTemplate>
+
   </div>
 </template>
 
+<script>
+    import FooterTemplate from './components/Footer.vue'
+
+    export default {
+        components: {
+            FooterTemplate
+        }
+    }
+</script>
+
 <style lang="scss">
     @import'../node_modules/bootstrap/scss/bootstrap.scss';
+    @import'../styles/responsive.scss';
 
     @font-face {
         font-family: 'Moon Get';
@@ -58,6 +74,9 @@
             color: #d20b10;
             text-decoration:none;
         }
+        &:focus, &:active{
+            color: inherit;
+        }
     }
 
     #app {
@@ -69,7 +88,7 @@
 
     .page-title{
         text-align:center;
-        margin: 50px 0 100px 0;
+        margin: 30px 0;
         font-family: 'Quick Sand';
         font-size: 3em;
         color: #d20b10;
@@ -79,7 +98,7 @@
     #nav {
         font-family: 'Quick Sand';
         font-size: 15px;
-        line-height: 90px;
+        line-height: 102px;
         float: right;
         margin-right: 15px;
         font-size: 15px;
@@ -108,6 +127,19 @@
         font-size: 25px;
         padding: 0 0 0 20px;
         display: inline-block;
+    }
+
+    .subtitle {
+        font-family : "Quick Sand";
+        text-transform : capitalize;
+        color: #d20b10;
+        text-align : center;
+        a{color: #d20b10;}
+        font-size: 25px;
+        padding : 30px 0;
+    }
+    .sub-content{
+        margin-top: 70px;
     }
 </style>
 

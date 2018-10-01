@@ -7,22 +7,22 @@
         <div class="img-list row">
             <div class="col-lg-4 col-md-6">
                 <div class="row">
-                    <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in tiersList(1,category.count)" :key="index" >
+                    <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in columns[0]" :key="index" >
                             <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 ">
                 <div class="row">
-                    <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in tiersList(2,category.count)" :key="index" >
-                            <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
+                    <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in columns[1]" :key="index" >
+                        <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="row">
-                    <div class="img-item col-lg-12 col-md-6 " v-for="(n, index) in tiersList(3,category.count)" :key="index" >
-                            <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
+                    <div class="img-item col-lg-12 col-md-6" v-for="(n, index) in columns[2]" :key="index" >
+                        <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" alt="">
                     </div>
                 </div>
             </div>
@@ -36,23 +36,48 @@
 
     var folder;
 
-export default {
-    methods: {
-        tiersList: function (tier, number) {
-            var tiers =[],i;
+    //Fonction de séparation du tableau en N parts
+    function chunkify(a, n) {
 
-            for (i=1;i<=number;i++){
-                if(i % 3 === 3-tier){
-                    tiers.push(i);
-                }
+        a = a.sort(function() { return 0.5 - Math.random() });
+
+        if (n < 2)
+            return [a];
+
+        var len = a.length,
+            out = [],
+            i = 0,
+            size;
+
+        if (len % n === 0) {
+            size = Math.floor(len / n);
+            while (i < len) {
+                out.push(a.slice(i, i += size));
             }
-            return tiers.sort(function() { return 0.5 - Math.random() });
         }
-    },
+
+        else{
+            while (i < len) {
+                size = Math.ceil((len - i) / n--);
+                out.push(a.slice(i, i += size));
+            }
+        }
+
+
+        return out;
+    }
+
+    //Fonction de création du tableau [1,..N]
+    function createNumbersArray (max){
+        return Array.from(new Array(max),(val,index)=>index+1);
+    }
+
+
+export default {
     beforeCreate() {
       var self=this;
 
-      this.category = {};
+      this.category = {}; 3
       this.category.name = this.$route.params.category;
 
       // En Dev , redirection des requetes vers le serveur Apache
@@ -68,6 +93,7 @@ export default {
           data: { category: this.category.name, method: "getCategoryCount" },
           success: function (response){
               self.category.count = Number(response);
+              self.columns = chunkify(createNumbersArray(self.category.count),3);
           }
       });
   }

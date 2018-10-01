@@ -5,6 +5,7 @@ import VueLazyLoad from 'vue-lazyload';
 
 
 Vue.config.productionTip = false
+
 Vue.use(VueLazyLoad);
 
 new Vue({

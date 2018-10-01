@@ -1,12 +1,12 @@
 <template>
-  <div class="content">
+  <div class="sub-content">
     <div class="page-title">
       PORTFOLIO CATEGORIES
     </div>
 
     <div class="categories-list row">
-      <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-md-3">
-        <img class="cover" :src="'./portfolio/'+category.name+'/cover.jpg'"/>
+      <router-link :to="'/portfolio/'+category.name" v-for="category in categories" :key="category.name" class="category col-sm-6 col-lg-4">
+        <img class="cover" :src="'./portfolio/'+category.name+'/cover.png'"/>
         <span class="title">{{ category.name }}</span>
       </router-link>
     </div>
@@ -49,12 +49,10 @@
   .category{
     margin-bottom:50px;
     .cover{
-      max-width: 100%;
       display: block;
       margin: 20px auto;
-      box-shadow: 0px 0px 20px #0000000d;
-      height: 280px;
       opacity : 0.7;
+      max-width: 100%;
     }
     &:hover .cover{
       opacity:1;
