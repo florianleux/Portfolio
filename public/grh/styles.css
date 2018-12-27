@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#image-map {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+
+.leaflet-container {
+    background-color: white !important;
+}
+
+#overlay {
+    color: white;
+    font-size: 12px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    margin-left: -200px;
+    width: 400px;
+    height: auto;
+    z-index: 1000;
+    padding: 0px 15px;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+
+#panic {
+    position: fixed;
+    bottom: 0px;
+    left: 20px;
+    z-index: 1000;
+    width: 70px;
+    height: 70px;
+}
+
+#panic img {
+    width: 50px;
+    height: 50px;
+    border: 0;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+#panic img:hover {
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 70px;
+    height: 70px;
+}
+
+#agamemnon {
+    display: none;
+    color: white;
+    font-size: 12px;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 580px;
+    height: 580px;
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 10000;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 7px;
+}
+
+#agamemnon img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.leaflet-popup-content {
+    font-family: "Open Sans", sans-serif;
+}
+
+.leaflet-popup-content .titre,
+.leaflet-popup-content .titre a {
+    color: #FF1C87;
+}
+
+.leaflet-popup-content .titre a {
+    font-weight: bold;
+}
+
+.leaflet-popup-content br {
+    line-height: 22px;
+}
+
+.leaflet-popup-content .source {
+    color: #888;
+}
+
+.reftooltip {
+    color: #FF1C87 !important;
+    font-family: "Open Sans", sans-serif;
+}
+
+.audiotooltip {
+    color: darkcyan !important;
+    font-family: "Open Sans", sans-serif;
+}
+
+path.ref:hover {
+    fill-opacity: 1;
+}
+
+path.audioref:hover {
+    stroke-opacity: 0.8;
+    fill-opacity: 0.8;
+}    
