@@ -32,7 +32,7 @@
        </div>
        <div class="row">
            <div class="credits left col-6">
-               Developed by <strong>Toysovore</strong>
+               Developed by <strong>Florian Leux</strong>
            </div>
            <div class="credits right  col-6">
                Powered by <strong>VueJS</strong>
