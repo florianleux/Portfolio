@@ -5,23 +5,16 @@
         </div>
 
         <div class="img-list row">
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-6 col-md-12">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in columns[0]" :key="index" >
                             <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 ">
+            <div class="col-lg-6 col-md-12">
                 <div class="row">
-                    <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in columns[1]" :key="index" >
-                        <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12">
-                <div class="row">
-                    <div class="img-item col-lg-12 col-md-6" v-for="(n, index) in columns[2]" :key="index" >
+                    <div class="img-item col-lg-12 col-md-6" v-for="(n, index) in columns[1]" :key="index" >
                         <img  v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'" title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
                     </div>
                 </div>
@@ -76,8 +69,7 @@
 export default {
     beforeCreate() {
       var self=this;
-
-      this.category = {}; 3
+      this.category = {};
       this.category.name = this.$route.params.category;
 
       // En Dev , redirection des requetes vers le serveur Apache
@@ -93,7 +85,7 @@ export default {
           data: { category: this.category.name, method: "getCategoryCount" },
           success: function (response){
               self.category.count = Number(response);
-              self.columns = chunkify(createNumbersArray(self.category.count),3);
+              self.columns = chunkify(createNumbersArray(self.category.count),2);
           }
       });
   }
