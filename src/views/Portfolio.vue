@@ -21,9 +21,9 @@
 
   export default {
     data() {
-        return {
-          categories: categories
-        }
+      return {
+        categories: categories
+      }
     },
       beforeCreate() {
           // En Dev , redirection des requetes vers le serveur Apache

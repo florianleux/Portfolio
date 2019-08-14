@@ -1,30 +1,30 @@
 <template>
-  <div id="app">
-    <div class="row" id="topBar">
-        <div class="col-sm-6 col-12">
-            <div class="logo-zone">
-                <router-link to="/">
-                    <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
-                    <div class="brand">TOYSOVORE</div>
-                </router-link>
+    <div id="app">
+        <div class="row" id="topBar">
+            <div class="col-sm-6 col-12">
+                <div class="logo-zone">
+                    <router-link to="/">
+                        <img width="75" alt="Logo Toysovore" src="./assets/sceau.png">
+                        <div class="brand">TOYSOVORE</div>
+                    </router-link>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="nav-bar" id="nav">
+                    <router-link to="/">Info</router-link>
+                    <router-link to="/portfolio">My Work</router-link>
+                    <a href="https://toysovore.patternbyetsy.com" target="_blank">Shop</a>
+                </div>
             </div>
         </div>
-        <div class="col-sm-6">
-          <div class="nav-bar" id="nav">
-              <router-link to="/">Info</router-link>
-              <router-link to="/portfolio">My Work</router-link>
-              <a href="https://toysovore.patternbyetsy.com" target="_blank">Shop</a>
-            </div>
+
+        <div id="main">
+            <router-view/>
         </div>
+
+        <FooterTemplate></FooterTemplate>
+
     </div>
-
-      <div id="main">
-          <router-view/>
-      </div>
-
-      <FooterTemplate></FooterTemplate>
-
-  </div>
 </template>
 
 <script>
@@ -38,8 +38,8 @@
 </script>
 
 <style lang="scss">
-    @import'../node_modules/bootstrap/scss/bootstrap.scss';
-    @import'../styles/responsive.scss';
+    @import '../node_modules/bootstrap/scss/bootstrap.scss';
+    @import '../styles/responsive.scss';
 
     @font-face {
         font-family: 'Moon Get';
@@ -62,32 +62,34 @@
         font-style: normal;
     }
 
-    body{
-      background: url("./assets/lightpaperfibers.png");
+    body {
+        background: url("./assets/lightpaperfibers.png");
         padding: 0 10%;
     }
 
-    a{
-        color:#2c3e50;
+    a {
+        color: #2c3e50;
         text-decoration: none;
-        &:hover{
+
+        &:hover {
             color: #d20b10;
-            text-decoration:none;
+            text-decoration: none;
         }
-        &:focus, &:active{
+
+        &:focus, &:active {
             color: inherit;
         }
     }
 
     #app {
-      font-family: 'Moon Get', Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #2c3e50;
+        font-family: 'Moon Get', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #2c3e50;
     }
 
-    .page-title{
-        text-align:center;
+    .page-title {
+        text-align: center;
         margin: 30px 0;
         font-family: 'Quick Sand';
         font-size: 3em;
@@ -103,26 +105,26 @@
         margin-right: 15px;
         font-size: 15px;
 
-      a {
-        text-transform : uppercase;
-        margin: 0 10px;
-        color: #b5b5b5;
-        text-decoration: none;
+        a {
+            text-transform: uppercase;
+            margin: 0 10px;
+            color: #b5b5b5;
+            text-decoration: none;
 
-        &.router-link-exact-active {
-          color: #d1060c;
-          font-weight: 900;
+            &.router-link-exact-active {
+                color: #d1060c;
+                font-weight: 900;
+            }
         }
-      }
     }
 
-    .logo-zone{
+    .logo-zone {
         margin-top: 15px;
         padding-left: 15px;
         float: left;
     }
 
-    .brand{
+    .brand {
         vertical-align: middle;
         font-size: 25px;
         padding: 0 0 0 20px;
@@ -130,15 +132,20 @@
     }
 
     .subtitle {
-        font-family : "Quick Sand";
-        text-transform : capitalize;
+        font-family: "Quick Sand";
+        text-transform: capitalize;
         color: #d20b10;
-        text-align : center;
-        a{color: #d20b10;}
+        text-align: center;
+
+        a {
+            color: #d20b10;
+        }
+
         font-size: 25px;
-        padding : 30px 0;
+        padding: 30px 0;
     }
-    .sub-content{
+
+    .sub-content {
         margin-top: 70px;
     }
 </style>
