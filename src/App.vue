@@ -13,7 +13,7 @@
                 <div class="nav-bar" id="nav">
                     <router-link to="/">Info</router-link>
                     <router-link to="/portfolio">My Work</router-link>
-                    <a href="https://toysovore.patternbyetsy.com" target="_blank">Shop</a>
+                    <a href="https://society6.com/stormfr" target="_blank">Shop</a>
                 </div>
             </div>
         </div>
