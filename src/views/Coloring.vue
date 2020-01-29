@@ -54,7 +54,6 @@
                 </div>
             </div>
         </transition>
-
     </div>
 </template>
 
@@ -168,10 +167,6 @@
             border-color:#d20b10;
         }
     }
-
-
-
-
 
     @page {
         size:210mm 297mm;
