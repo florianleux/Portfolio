@@ -23,8 +23,8 @@
 
 <script>
     import VueInstagram from 'vue-instagram'
-    var PartA="Mjc0MjM0NTU2LjE2NzdlZDAuMTk0ZTE4NW",
-        PartB="RhYWU1NDkzYThiOWQ1NTI0YmI0MDA5MWQ=";
+    var PartA="Mjc0MjM0NTU2LjE2NzdlZDAuODM1YmMwN",
+        PartB="2Q5NzI2NGQ5NGExYTA2MDUzMTM1YjBmYmI==";
 
 export default {
     components: {
@@ -32,7 +32,7 @@ export default {
     },
     data: function(){
         return {
-            token : atob(PartA + PartB)
+            token : "274234556.1677ed0.835bc07d97264d94a1a06053135b0fbb"
         }
     }
 }
