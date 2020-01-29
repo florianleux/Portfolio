@@ -50,7 +50,7 @@
             <div v-if="selectedImage" class="modal-backdrop" @click.stop="selectedImage = null">
                 <div id="zoomedImage" class="zoom-modal">
                     <img  :src="selectedImage" alt=""/>
-                    <button class="print" @click.stop="print"> PRINT ME !</button>
+                    <button class="print" @click.stop="print"> <i class="fa fa-print"></i> PRINT ME !</button>
                 </div>
             </div>
         </transition>
