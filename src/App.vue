@@ -13,6 +13,7 @@
                 <div class="nav-bar" id="nav">
                     <router-link to="/">Info</router-link>
                     <router-link to="/portfolio">My Work</router-link>
+                    <router-link to="/coloring">Coloring Pages</router-link>
                     <a href="https://society6.com/stormfr" target="_blank">Shop</a>
                 </div>
             </div>
@@ -148,6 +149,8 @@
     .sub-content {
         margin-top: 70px;
     }
+
+
 </style>
 
 

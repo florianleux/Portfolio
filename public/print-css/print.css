@@ -1,0 +1,18 @@
+@media print,screen {
+    * { margin: 0 !important; padding: 0 !important; }
+    html, body {
+        /*changing width to 100% causes huge overflow and wrap*/
+        height:100% !important;
+        overflow: hidden !important;
+        background: #FFF !important;
+        font-size: 9.5pt !important;
+    }
+
+    body * { width:100% !important; }
+
+    button {
+        display: none;
+    }
+}
+
+@page { size: auto;  margin: 5mm; }

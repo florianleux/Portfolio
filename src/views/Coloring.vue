@@ -1,34 +1,46 @@
 <template>
-    <div class="content">
+    <div class="sub-content">
         <div class="page-title">
-            {{category.name}}
+           TOYSO'S COLORING PAGES
+        </div>
+
+        <div class="about-text text-center">
+            <p>You will find below some of my inkings to print if you want some fun coloring pages.
+            Just click on any drawings to print it !</p>
+
+            <div class="subtitle">Disclaimer</div>
+
+            <p>Of course, these drawings are free to use for <strong>PERSONAL USE ONLY</strong> ! Do not modify them or publish them without my authorization.</p>
+
+            <p>If you have any questions please contact me on my social networks : @toysovore .</p>
+
         </div>
 
         <div v-bind:class="[{ 'selected': selectedImage }, 'img-list', 'row']">
             <div class="col-lg-4 col-md-12">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-12" v-for="(n, index) in columns[0]" :key="index">
-                        <img @click="zoom('./portfolio/'+category.name+'/'+(n)+'.jpg')"
-                             v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'"
-                             title="© 2020 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
+                        <img @click="zoom('./coloring/'+(n)+'.jpg')"
+                             v-lazy="'./coloring/'+(n)+'.jpg'"
+                             title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-6" v-for="(n, index) in columns[1]" :key="index">
-                        <img @click="zoom('./portfolio/'+category.name+'/'+(n)+'.jpg')"
-                             v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'"
-                             title="© 2020 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
+                        <img @click="zoom('./coloring/'+(n)+'.jpg')"
+                             v-lazy="'./coloring/'+(n)+'.jpg'"
+                             title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="row">
                     <div class="img-item col-lg-12 col-md-6" v-for="(n, index) in columns[2]" :key="index">
-                        <img @click="zoom('./portfolio/'+category.name+'/'+(n)+'.jpg')"
-                             v-lazy="'./portfolio/'+category.name+'/'+(n)+'.jpg'"
-                             title="© 2020 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
+                        <img @click="zoom('./coloring/'+(n)+'.jpg')"
+                             v-lazy="'./coloring/'+(n)+'.jpg'"
+                             title="© 2018 Toysovore All Rights Reserved" alt="Illutration by Toysovore">
                     </div>
                 </div>
             </div>
@@ -36,12 +48,12 @@
 
         <transition name="fade" mode="out-in">
             <div v-if="selectedImage" class="modal-backdrop" @click.stop="selectedImage = null">
-                <div class="zoom-modal">
-                    <img :src="selectedImage" alt=""/>
+                <div id="zoomedImage" class="zoom-modal">
+                    <img  :src="selectedImage" alt=""/>
+                    <button class="print" @click.stop="print"> PRINT ME !</button>
                 </div>
             </div>
         </transition>
-
 
     </div>
 </template>
@@ -98,12 +110,18 @@
         methods: {
             zoom(url) {
                 this.selectedImage = url;
+            },
+
+            print(){
+                // Pass the element id here
+                this.$htmlToPaper('zoomedImage');
             }
         },
+
         beforeCreate() {
             var self = this;
-            this.category = {};
-            this.category.name = this.$route.params.category;
+            this.coloring = {};
+
 
             // En Dev , redirection des requetes vers le serveur Apache
             if (process.env.NODE_ENV === 'development') {
@@ -113,12 +131,11 @@
             }
 
             $.post({
-                url: "/" + folder + "/categories.php",
+                url: "/" + folder + "/coloring.php",
                 async: false,
-                data: {category: this.category.name, method: "getCategoryCount"},
                 success: function (response) {
-                    self.category.count = Number(response);
-                    self.columns = chunkify(createNumbersArray(self.category.count), 3);
+                    self.coloring.count = Number(response);
+                    self.columns = chunkify(createNumbersArray(self.coloring.count), 3);
                 }
             });
         }
@@ -126,74 +143,39 @@
 </script>
 
 <style lang="scss">
-
-    .fade-enter-active {
-        transition: opacity 1s
+    
+    .zoom-modal{
+        position: relative;
     }
 
-    .fade-leave-active {
-        transition: opacity .5s
-    }
-
-    .fade-enter,
-    .fade-leave-to {
-        opacity: 0
-    }
-
-
-    .img-list {
-        .img-item {
-            padding: 15px;
-        }
-
-        img {
-            max-width: 100%;
-            box-shadow: 0px 0px 20px #0000000d;
-
-            &:hover {
-                cursor: pointer;
-                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-            }
-        }
-
-        &.selected {
-            filter: blur(2px);
-            -webkit-filter: blur(2px);
-        }
-    }
-
-    .modal-backdrop {
-        position: fixed;
-        background: rgba(0, 0, 0, 0.65);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+    button.print{
+        text-decoration: none;
+        position: absolute;
+        bottom: 30px;
+        display: block;
         text-align: center;
+        font-size: 16px;
+        left: 50%;
+        margin-left: -78px;
+        padding: 5px 25px;
+        border: 1px solid #000;
+        border-radius: 15px;
+        background: #fff;
+        color: #000;
 
-        &:hover {
-            cursor: pointer;
+        &:hover, &:active{
+            color:#d20b10;
+            border-color:#d20b10;
         }
     }
 
-    .zoom-modal {
-        margin: 0 auto;
-        height: 90%;
-        max-width: 90%;
-        display: inline-block;
-        border-radius: 3px;
-        margin-top: 4%;
-        padding: 1%;
 
-        img {
-            max-height: 100%;
-            max-width: 100%;
-            display: block;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 3px;
-            box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.4);
-        }
+
+
+
+    @page {
+        size:210mm 297mm;
+        margin: 0;
     }
+
 </style>
