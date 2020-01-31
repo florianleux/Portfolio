@@ -11,12 +11,12 @@
             <img src="./../assets/portrait.png" alt="Toysovore Portrait">
           </div>
           <div class="col-lg-8 about-text">
-            <p>I'm <strong>Toysovore</strong>, freelance illustrator from Bordeaux, France</p>
-            <p>I love creating characters and environments, using both digital and traditional techniques. I can produce a large panel of art from preliminary concept arts, roughs and storyboards to books or games illustrations.</p>
-            <p><strong>I am currently available for hiring</strong>, so please contact me if you are interested in a collaboration. </p>
+            <p>I'm <strong>Toysovore</strong>, amateur illustrator from Bordeaux, France</p>
+            <p>I love creating characters and environments, using both digital and traditional techniques. Recently, I focused on full-page illustrations made with Procreate on the Ipad Pro.</p>
+
             <br>
             <p>Looking for prints ? Here is <a href="https://society6.com/stormfr" target="_blank">my shop</a>.</p>
-            <p>I am very active on Instagram, you can follow me there not to miss any new content !</p>
+
             <p><strong>Have a great tour in my portfolio !</strong></p>
           </div>
         </div>
