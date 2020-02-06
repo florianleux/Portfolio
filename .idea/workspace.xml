@@ -30,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/views/About.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="14" column="181" selection-start-line="14" selection-start-column="181" selection-end-line="14" selection-end-column="181" />
+            <state relative-caret-position="646">
+              <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -183,9 +183,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1058" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1275" />
+    <option name="y" value="155" />
     <option name="width" value="1066" />
     <option name="height" value="1656" />
   </component>
@@ -414,12 +414,12 @@
       <workItem from="1572860162201" duration="633000" />
       <workItem from="1575295987150" duration="51000" />
       <workItem from="1580284617649" duration="13336000" />
-      <workItem from="1580491855236" duration="80000" />
+      <workItem from="1580491855236" duration="747000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180799000" />
+    <option name="totallyTimeSpent" value="181466000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,10 +431,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1058" y="-8" width="1066" height="1656" extended-state="6" />
+    <frame x="-1275" y="155" width="1066" height="1656" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9137931" visible="true" weight="0.25347912" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9137931" visible="true" weight="0.25347912" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Gulp" order="2" sideWeight="0.0862069" side_tool="true" visible="true" weight="0.21088019" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -445,11 +445,11 @@
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32871974" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="8" sideWeight="0.500994" side_tool="true" visible="true" weight="0.21" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32934782" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Command Line Tools Console" order="11" weight="0.2675894" />
-      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.21" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49900597" visible="true" weight="0.21" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -655,8 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/About.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="14" column="181" selection-start-line="14" selection-start-column="181" selection-end-line="14" selection-end-column="181" />
+        <state relative-caret-position="646">
+          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
