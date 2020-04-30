@@ -12,7 +12,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
     "@fortawesome/vue-fontawesome": "^0.1.1",
     "bootstrap": "^4.1.3",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "vue": "^2.5.17",
     "vue-html-to-paper": "^1.1.1",
     "vue-instagram": "^2.0.1",
